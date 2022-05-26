@@ -1,7 +1,6 @@
 import sqlite3
 import pandas as pd
 import streamlit as st
-from PIL import Image
 
 # Title
 #image = Image.open('he.jpg')
