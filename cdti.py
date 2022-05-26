@@ -19,17 +19,6 @@ dfg = df[df.Grupo == grupo].sort_values(by='Area')
 
 dfg = dfg.drop('Grupo', 1)
 
-# CSS to inject contained in a string
-hide_dataframe_row_index = """
-            <style>
-            .row_heading.level0 {display:none}
-            .blank {display:none}
-            </style>
-            """
-
-# Inject CSS with Markdown
-st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
-
 # tabla
 st.subheader(f'Vídeos de "{grupo}"')
 # st.dataframe(dfg)
