@@ -1,4 +1,3 @@
-
 import sqlite3
 import pandas as pd
 import streamlit as st
@@ -18,7 +17,7 @@ grupo = st.selectbox('Selecione grupo de vídeos',grupos)
 # grupo = 'Clusters'
 
 conn = sqlite3.connect('videos.db')
-df = pd.read_sql(f'SELECT * FROM videos WHERE videos.Grupo == "{grupo}"', conn)
+df = pd.read_sql(f'SELECT Grupo, Area, Titulo, Link FROM videos WHERE videos.Grupo == "{grupo}"', conn)
 conn.close()
 
 
@@ -27,6 +26,7 @@ conn.close()
 # tabla
 st.subheader(f'Vídeos de "{grupo}"')
 st.dataframe(df)
+
 
 
 
