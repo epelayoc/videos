@@ -1,6 +1,11 @@
+import sqlite3
+import pandas as pd
+import streamlit as st
+from PIL import Image
+
 # Title
-image = Image.open('he.jpg')
-st.image(image)
+#image = Image.open('he.jpg')
+#st.image(image)
 st.title("Partner search tool")
 
 # Select country
